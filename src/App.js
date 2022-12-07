@@ -7,18 +7,20 @@ import Home from "./components/pages/Home";
 import Video from "./components/pages/Video";
 
 function App() {
-    return (
-        <Router>
-            <Navigation />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/videos/:videoId" element={<Video />} />
-                <Route path="/videos/add" element={<Add />} />
-                <Route path="/videos/edit/:videoId" element={<Edit />} />
-            </Routes>
-            <Footer />
-        </Router>
-    );
+	return (
+		<Router>
+			<Navigation />
+			<div className='container px-10'>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/videos/:videoId' element={<Video />} />
+					<Route path='/videos/add' element={<Add />} />
+					<Route path='/videos/edit/:videoId' element={<Edit />} />
+				</Routes>
+			</div>
+			<Footer />
+		</Router>
+	);
 }
 
 export default App;
